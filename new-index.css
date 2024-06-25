@@ -18,7 +18,7 @@ body {
 	grid-template-areas:
 		"filler-1 logo logo filler-2"
 		"filler-1 notebook notebook filler-2";
-	grid-template-rows: 150px 600px;
+	grid-template-rows: 100px 650px;
 	grid-template-columns: 14% 36% 36% 14%;
 	max-width: 1460px;
 	margin: auto;
@@ -30,6 +30,16 @@ body {
 #logo {
 	grid-area: logo;
 	background: lightgreen;
+	text-align: center;
+	overflow: visible;
+	z-index: 10;
+}
+
+#logo img {
+	position: relative;
+	max-width: 600px;
+	top: -80px;
+	pointer-events: none;
 }
 
 #notebook {
@@ -61,12 +71,13 @@ body {
 	position: relative;
 }
 
-#notebook-wrapper {
+#notebook-cover {
 	display: grid;
 	grid-template-areas:
 		"tab1 page1 page2 tab2";
 	grid-template-rows: 600px;
 	grid-template-columns: 10% 40% 40% 10%;
+	padding: 30px;
 }
 
 #tab-left {
