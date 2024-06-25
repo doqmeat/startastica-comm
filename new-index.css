@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+	border: 1px solid pink;
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	font-size: 16px;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-areas:
+		"filler-1 logo logo filler-2"
+		"filler-1 notebook notebook filler-2";
+	grid-template-rows: 150px 600px;
+	grid-template-columns: 14% 36% 36% 14%;
+	max-width: 1460px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px solid red;
+}
+
+#logo {
+	grid-area: logo;
+	background: lightgreen;
+}
+
+#notebook {
+	grid-area: notebook;
+	background: lightyellow;
+}
+
+#filler-1 {
+	grid-area: filler-1;
+	background: lightblue;
+}
+
+#filler-2 {
+	grid-area: filler-2;
+	background: lightpink;
+}
+
+#filler-1,
+#filler-2 {
+	margin: 40px 0;
+	top: 40px;
+}
+
+#filler-1,
+#filler-2,
+#logo,
+#notebook {
+	display: block;
+	position: relative;
+}
+
+#notebook-wrapper {
+	display: grid;
+	grid-template-areas:
+		"tab1 page1 page2 tab2";
+	grid-template-rows: 600px;
+	grid-template-columns: 10% 40% 40% 10%;
+}
+
+#tab-left {
+	grid-area: tab1;
+	background: orange;
+}
+
+#tab-right {
+	grid-area: tab2;
+	background: purple;
+}
+
+.page-left {
+	grid-area: page1;
+	background: white;
+	border: 1px solid blue;
+}
+
+.page-right {
+	grid-area: page2;
+	background: white;
+	border: 1px solid green;
+}
