@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	border: 1px solid pink;
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	font-size: 16px;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-areas:
+		"filler-1 logo logo filler-2"
+		"filler-1 notebook notebook filler-2";
+	grid-template-rows: 100px 650px;
+	grid-template-columns: 14% 36% 36% 14%;
+	max-width: 1460px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px solid red;
+}
+
+#logo {
+	grid-area: logo;
+	background: lightgreen;
+	text-align: center;
+	overflow: visible;
+	z-index: 10;
+}
+
+#logo img {
+	position: relative;
+	max-width: 600px;
+	top: -100px;
+	pointer-events: none;
+}
+
+#notebook {
+	grid-area: notebook;
+	background: lightyellow;
+}
+
+#filler-1 {
+	grid-area: filler-1;
+	background: lightblue;
+}
+
+#filler-2 {
+	grid-area: filler-2;
+	background: lightpink;
+}
+
+#filler-1,
+#filler-2 {
+	margin: 40px 0;
+	top: 40px;
+}
+
+#filler-1,
+#filler-2,
+#logo,
+#notebook {
+	display: block;
+	position: relative;
+}
+
+#notebook-cover {
+	padding: 30px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+	body {
+		color: red;
+		font-family: ms pgothic;
+	}
+}
