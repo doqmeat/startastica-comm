@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box;
-	border: 1px solid pink;
 }
 
 html {
@@ -45,6 +44,7 @@ body {
 #notebook {
 	grid-area: notebook;
 	background: lightyellow;
+	display: flex;
 }
 
 #filler-1 {
@@ -63,196 +63,55 @@ body {
 	top: 40px;
 }
 
-#filler-1,
-#filler-2,
-#logo,
-#notebook {
-	display: block;
-	position: relative;
+/*notebook*/
+
+#tab1 {
+	background: pink;
+	flex: 10%;
 }
 
-#notebook-cover {
-	padding: 30px;
+#notebook-pages {
+	background: white;
+	flex: 80%;
+	display: grid;
 }
 
-/*old notebook css*/
-
-/*this is my ugly binder spiral! feel free to remove it or change it. it wont mess the rest of the code! */
-#tab1-wrapper:after,
-#tab2-wrapper:after,
-#tab3-wrapper:after,
-#tab4-wrapper:after,
-#tab5-wrapper:after,
-#tab6-wrapper:after,
-#tab7-wrapper:after,
-#tab8-wrapper:after {
-	content: url(https://doqmeat.neocities.org/!g/web/materials/spiral-test4.png);
-	position: absolute;
-	z-index: 10;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
-	pointer-events: none;
+#tab1-wrapper {
+	background: orange;
+	display: flex;
+	border: 2px solid red;
 }
 
-/* PAGES CSS */
-
-.paper {
-	/*the CSS of both "pages" boxes. you can choose the look of ALL pages here */
-	background: url(https://doqmeat.neocities.org/!g/bg/whiteline.jpg);
-	z-index: 5;
-	position: relative;
-	display: inline-block;
-	box-sizing: border-box;
-	border: 1px solid lightsteelblue;
-	height: 600px;
-}
-
-.left {
-	width: 434px;
-	margin-left: 50px;
-	margin-right: 10px;
-	border-radius: 10px 0px 0px 10px;
-	overflow: hidden;
-}
-
-.left-in {
-	/*			the main purpose of this class if so the scrollbar of left pages isn't obscured by the bind spiral */
-	padding: 15px 10px 15px 25px;
-	height: 100%;
-	margin-right: 15px;
-	overflow: auto;
-}
-
-.right {
-	padding: 15px 25px;
-	width: 434px;
-	margin-left: 10px;
-	border-radius: 0px 10px 10px 0px;
-	overflow: auto;
-}
-
-/* you can also customize the look of SPECIFIC pages. take TAB 2 for example: */
-
-#tab2-p {
-	font-family: consolas;
-	font-size: 14px;
-	background: url(https://doqmeat.neocities.org/!g/bg/yellobg.png);
-	border-color: lightcoral;
-}
-
-#tab4-p {
-	font-family: consolas;
-	font-size: 14px;
-	background: url(https://doqmeat.neocities.org/!g/bg/yellobg.png);
-	border-color: lightcoral;
-}
-
-#tab6-p {
-	font-family: consolas;
-	font-size: 14px;
-	background: url(https://doqmeat.neocities.org/!g/bg/yellobg.png);
-	border-color: lightcoral;
-}
-
-#tab8-p {
-	font-family: consolas;
-	font-size: 14px;
-	background: url(https://doqmeat.neocities.org/!g/bg/yellobg.png);
-	border-color: lightcoral;
-
-}
-
-/* tab buttons CSS stuff */
-
-.tab {
-	/* for the ones on the right */
-	width: 590px;
-	height: 50px;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	rotate: -90deg;
-	top: 0px;
-	left: -232px;
-}
-
-.tab2 {
-	/* for the ones on the left */
-	width: 590px;
-	height: 50px;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	rotate: 90deg;
-	top: 595px;
-	right: -237px;
-}
-
-.tab button,
-.tab2 button {
-	/*this is the look of the TABS! */
-	z-index: 1;
-	position: relative;
+.page {
+	display: inline-flex;
+	width: 49.5%;
+	background: white;
 	vertical-align: top;
-	width: 120px;
-	margin: 0px 8px;
-	padding: 10px 0px 30px 0px;
-	font-family: Courier, monospace;
-	border: none;
-	cursor: grabbing;
-	font-size: 19px;
-	transition-duration: 0.5s;
-	top: 10px;
-	border-radius: 10px 10px 0 0;
-	border: 5px solid white;
-	color: #756A6B
+	height: 100%;
+	border: blue solid;
 }
 
-/* here you can change the color of each individual TAB button*/
-.tab1-b {
-	background: #FFBE6A;
+.inner-left {
+	margin: 30px;
+	padding: 5px;
+	height: 580px;
+	overflow: auto;
 }
 
-.tab2-b {
-	background: #FFE597;
+.inner-right {
+	margin: 30px;
+	padding: 5px;
+	height: 580px;
+	overflow: auto;
 }
 
-.tab3-b {
-	background: #FFBE6A;
+#tab2 {
+	background: lightblue;
+	flex: 10%;
 }
 
-.tab4-b {
-	background: #FFE597;
-}
-
-.tab5-b {
-	background: #FFE597;
-}
-
-.tab6-b {
-	background: #FFBE6A;
-}
-
-.tab7-b {
-	background: #FFE597;
-}
-
-.tab8-b {
-	background: #FFBE6A;
-
-	/* selected TAB effect aka when its focused */
-	.tab button:focus,
-	.tab2 button:focus {
-		top: 0px;
-		cursor: -webkit-grabbing;
-		cursor: grabbing;
-		box-shadow: 1px 1px 20px 1px grey;
+@media only screen and (max-width: 1300px) {
+	body {
+		background: red;
 	}
-
-	@media only screen and (max-width: 1300px) {
-		body {
-			background: red;
-		}
-	}
+}
