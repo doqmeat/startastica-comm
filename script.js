@@ -2,12 +2,12 @@
 function openTab(tabName) {
 	var i;
 	var tabcontent = document.getElementById(tabName);
-	var otherContent = document.getElementsByClassName("tabcontent");
+	var otherContent = document.getElementsByClassName("wrapper");
 	var defaultOpen = document.getElementById("defaultOpen");
 	for (i = 0; i < otherContent.length; i++) {
 		otherContent[i].style.display = "none";
 	}
-	tabcontent.style.display = "block";
+	tabcontent.style.display = "flex";
 }
 document.getElementById("defaultOpen").click();
 

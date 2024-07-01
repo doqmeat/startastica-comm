@@ -41,12 +41,6 @@ body {
 	pointer-events: none;
 }
 
-#notebook {
-	grid-area: notebook;
-	background: lightyellow;
-	display: flex;
-}
-
 #filler-1 {
 	grid-area: filler-1;
 	background: lightblue;
@@ -65,49 +59,80 @@ body {
 
 /*notebook*/
 
+#notebook {
+	grid-area: notebook;
+	background: lightyellow;
+	display: flex;
+	padding: 30px;
+}
+
 #tab1 {
-	background: pink;
-	flex: 10%;
+	flex: 1%;
+}
+
+#tab2 {
+	flex: 1%;
 }
 
 #notebook-pages {
-	background: white;
-	flex: 80%;
+	flex: 87%;
 	display: grid;
 }
 
-#tab1-wrapper {
-	background: orange;
+.wrapper {
 	display: flex;
-	border: 2px solid red;
 }
 
 .page {
 	display: inline-flex;
 	width: 49.5%;
 	background: white;
+	border: 1px solid pink;
 	vertical-align: top;
 	height: 100%;
-	border: blue solid;
+	margin-right: 10px;
+}
+
+.page:last-child {
+	margin: 0px;
 }
 
 .inner-left {
 	margin: 30px;
 	padding: 5px;
-	height: 580px;
+	height: 520px;
 	overflow: auto;
 }
 
 .inner-right {
 	margin: 30px;
 	padding: 5px;
-	height: 580px;
+	height: 520px;
 	overflow: auto;
 }
 
-#tab2 {
-	background: lightblue;
-	flex: 10%;
+#tab1 button,
+#tab2 button {
+	display: block;
+	font-family: ms gothic;
+	border: 1px dashed black;
+	background: white;
+	text-orientation: mixed;
+	padding: 10px;
+	margin: 23px 0px;
+	height: 100px;
+}
+
+#tab1 button {
+	writing-mode: sideways-lr;
+	float: right;
+	border-right: none;
+}
+
+#tab2 button {
+	writing-mode: vertical-lr;
+	float: left;
+	border-left: none;
 }
 
 @media only screen and (max-width: 1300px) {
