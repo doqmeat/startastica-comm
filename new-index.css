@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background: url("assets/Startastica%20bg.png");
+	background: url("assets/startastica-bg.png");
 	font-family: var(--fonts);
 	margin: 0px;
 	font-size: 17px;
@@ -61,6 +61,8 @@ body {
 #filler-2 {
 	margin: 40px 15px;
 	top: 40px;
+	text-align: center;
+	padding:5px;
 }
 
 /*notebook*/
