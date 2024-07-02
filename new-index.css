@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background: url("assets/Startastica%20bg2.png");
+	background: url("assets/Startastica%20bg.png");
 	font-family: var(--fonts);
 	margin: 0px;
 	font-size: 17px;
@@ -29,7 +29,6 @@ body {
 	margin: auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	border: 1px solid red;
 }
 
 #logo {
