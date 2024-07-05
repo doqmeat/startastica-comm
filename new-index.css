@@ -16,6 +16,7 @@ body {
 	font-family: var(--fonts);
 	margin: 0px;
 	font-size: 17px;
+	word-break: keep-all;
 }
 
 #wrapper {
@@ -69,7 +70,7 @@ body {
 
 #notebook {
 	grid-area: notebook;
-	background: url("assets/pages/binder-dither.png");
+	background: url("assets/pages/notebook-cover.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -91,15 +92,15 @@ body {
 */
 
 #tab1 {
-	flex: 1%;
+	flex: 2%;
 }
 
 #tab2 {
-	flex: 1%;
+	flex: 2%;
 }
 
 #notebook-pages {
-	flex: 87%;
+	flex: 90%;
 	display: grid;
 }
 
@@ -122,8 +123,7 @@ body {
 }
 
 .inner {
-	background: white;
-	border:1px solid lightgreen;
+	border: 1px solid lightgreen;
 	margin: 10px;
 	padding: 5px;
 	width: 100%;
@@ -144,21 +144,41 @@ body {
 	display: block;
 	font-family: var(--fonts);
 	font-size: 15px;
-	border: 1px dashed black;
+	border: none;
 	background: white;
 	text-orientation: mixed;
-	padding: 10px;
 	margin: 23px 0px;
 	height: 100px;
+	width: 30px;
+	transition-duration: 0.5s;
+}
+
+#tab1 button:hover,
+#tab2 button:hover {
+	width: 40px;
+}
+
+#tab1 button:active,
+#tab2 button:active {}
+
+#tab1 button:focus,
+#tab2 button:focus {
+	width: 40px;
 }
 
 #tab1 button {
+	padding-right: -5px;
+	background: url(assets/tab/2.png);
+	background-size: 100px;
 	writing-mode: sideways-lr;
 	float: right;
 	border-right: none;
 }
 
 #tab2 button {
+	background: url(assets/tab/1.png);
+	background-size: 180px;
+	background-position: right;
 	writing-mode: vertical-lr;
 	float: left;
 	border-left: none;

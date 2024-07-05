@@ -1,3 +1,5 @@
+document.getElementById("defaultOpen").click();
+//document.getElementById("defaultOpen").style.width = "40px";
 //		funtion that makes the tabs change the page
 function openTab(tabName) {
 	var i;
@@ -9,7 +11,6 @@ function openTab(tabName) {
 	}
 	tabcontent.style.display = "flex";
 }
-document.getElementById("defaultOpen").click();
 
 //function that makes the title scroll
 (function titleScroller(text) {
