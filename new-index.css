@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	background: url("assets/startastica-bg.png");
+	background: url("assets/bg/Untitled439_20240708140510.png");
+	background-size: cover;
 	font-family: var(--fonts);
 	margin: 0px;
 	font-size: 17px;
