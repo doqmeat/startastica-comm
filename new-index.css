@@ -159,9 +159,6 @@ body {
 	width: 40px;
 }
 
-#tab1 button:active,
-#tab2 button:active {}
-
 #tab1 button:focus,
 #tab2 button:focus {
 	width: 40px;
@@ -170,15 +167,15 @@ body {
 #tab1 button {
 	padding-right: -5px;
 	background: url(assets/tab/2.png);
-	background-size: 100px;
+	background-size: 105px;
 	writing-mode: sideways-lr;
 	float: right;
 	border-right: none;
 }
 
 #tab2 button {
-	background: url(assets/tab/1.png);
-	background-size: 180px;
+	background: url(assets/tab/2-reverse.png);
+	background-size: 105px;
 	background-position: right;
 	writing-mode: vertical-lr;
 	float: left;
