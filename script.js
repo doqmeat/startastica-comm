@@ -1,20 +1,15 @@
 var defaultOpen = document.getElementById("defaultOpen");
 defaultOpen.click();
-defaultOpen.style.width = "40px";
 
 //		funtion that makes the tabs change the page
 function openTab(tabName) {
 	var i;
 	var tabcontent = document.getElementById(tabName);
 	var otherContent = document.getElementsByClassName("wrapper");
-	var defaultOpen = document.getElementById("defaultOpen");
 	for (i = 0; i < otherContent.length; i++) {
 		otherContent[i].style.display = "none";
 	}
 	tabcontent.style.display = "flex";
-	if (defaultOpen.style.width == "40px") {
-		defaultOpen.style.width = "30px";
-	}
 }
 
 
