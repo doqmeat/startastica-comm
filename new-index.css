@@ -65,6 +65,7 @@ body {
 	top: 40px;
 	text-align: center;
 	padding: 5px;
+	overflow: auto;
 }
 
 /*notebook*/
@@ -146,7 +147,6 @@ body {
 	font-family: var(--fonts);
 	font-size: 15px;
 	border: none;
-	background: white;
 	text-orientation: mixed;
 	margin: 23px 0px;
 	height: 100px;
@@ -182,10 +182,6 @@ body {
 	border-left: none;
 }
 
-@media only screen and (max-width: 1300px) {
-	body {}
-}
-
 @font-face {
 	font-family: gaegu-r;
 	src: url("assets/fonts/Gaegu-Regular.ttf")
@@ -194,4 +190,110 @@ body {
 @font-face {
 	font-family: star;
 	src: url("assets/fonts/Stars_font.ttf")
+}
+
+@media only screen and (max-width: 1450px) {
+
+	#tab1 button:hover,
+	#tab2 button:hover {
+		width: 33px;
+	}
+
+	#tab1 button:focus,
+	#tab2 button:focus {
+		width: 33px;
+	}
+
+	#tab1 button,
+	#tab2 button {
+		margin: 15px 0px;
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+	#notebook {
+		background-size: 840px;
+	}
+
+	.inner {
+		height: 88%;
+		margin-top: 40px;
+	}
+
+	#tab1,
+	#tab2 {
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 1130px) {
+	#notebook {
+		background-size: 760px;
+	}
+
+	.inner {
+		height: 82%;
+		margin-top: 50px;
+	}
+
+	#tab1 button,
+	#tab2 button {
+		margin: 10px 0px;
+	}
+
+	#tab1,
+	#tab2 {
+		margin-top: 50px;
+	}
+
+	#logo img {
+		position: relative;
+		max-width: 600px;
+		top: -80px;
+		pointer-events: none;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	#wrapper {
+		display: block;
+		max-width: 1460px;
+		margin: auto;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	#notebook {
+		background-size: 900px;
+		background-position: top;
+		border: 1px solid black;
+		height: 620px;
+	}
+
+	#tab1,
+	#tab2 {
+		margin-top: 0px;
+	}
+
+
+	#tab1 button,
+	#tab2 button {
+		margin: 23px 0px;
+	}
+
+	#tab1 button:hover,
+	#tab2 button:hover {
+		width: 37px;
+	}
+
+	#tab1 button:focus,
+	#tab2 button:focus {
+		width: 37px;
+	}
+
+	.inner {
+		height: 96%;
+		margin-top: 10px;
+	}
+
 }
