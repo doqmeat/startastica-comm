@@ -184,16 +184,15 @@ body {
 
 @font-face {
 	font-family: gaegu-r;
-	src: url("assets/fonts/Gaegu-Regular.ttf")
+	src: url("assets/fonts/Gaegu-Regular.ttf");
 }
 
 @font-face {
 	font-family: star;
-	src: url("assets/fonts/Stars_font.ttf")
+	src: url("assets/fonts/Stars_font.ttf");
 }
 
 @media only screen and (max-width: 1450px) {
-
 	#tab1 button:hover,
 	#tab2 button:hover {
 		width: 33px;
@@ -259,22 +258,21 @@ body {
 		display: block;
 		max-width: 1460px;
 		margin: auto;
-		margin-top: 50px;
+		margin-top: 0px;
 		margin-bottom: 50px;
 	}
 
 	#notebook {
-		background-size: 900px;
+		background-size: contain;
 		background-position: top;
 		border: 1px solid black;
-		height: 620px;
+		height: 100%;
 	}
 
 	#tab1,
 	#tab2 {
 		margin-top: 0px;
 	}
-
 
 	#tab1 button,
 	#tab2 button {
@@ -292,8 +290,26 @@ body {
 	}
 
 	.inner {
-		height: 96%;
+		height: 95%;
 		margin-top: 10px;
 	}
 
+	#logo img {
+		max-width: 600px;
+		top: 0px;
+	}
+
+	#filler-1,
+	#filler-2 {
+		margin: 15px 20px;
+	}
+}
+
+@media only screen and (max-width: 915px) {
+	#notebook {
+		background-size: cover;
+	}
+}
+
+@media only screen and (max-width: 750px) {
 }
