@@ -193,6 +193,7 @@ a:hover {
 	padding-right: -5px;
 	background: url(assets/tab/2.png);
 	background-size: 105px;
+	writing-mode: vertical-lr;
 	writing-mode: sideways-lr;
 	float: right;
 	border-right: none;
