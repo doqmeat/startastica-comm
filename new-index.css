@@ -312,8 +312,13 @@ a:hover {
 		width: 37px;
 	}
 
+	#logo {
+		margin-top: -30px;
+		height: 210px;
+	}
+
 	#logo img {
-		width: 80%;
+		width: 100%;
 		top: 0px;
 	}
 
