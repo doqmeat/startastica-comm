@@ -9,6 +9,7 @@
 html {
 	margin: 0px;
 	padding: 0px;
+	scrollbar-color: #dfada8 #e9deac;
 }
 
 body {
@@ -49,23 +50,37 @@ body {
 
 #filler-1 {
 	grid-area: filler-1;
-	border: 1px solid pink;
-	background: white;
+	box-shadow: -5px 5px 3px #b19d97;
 }
 
 #filler-2 {
 	grid-area: filler-2;
-	border: 1px solid pink;
-	background: white;
+	box-shadow: 5px 5px 3px #b19d97;
 }
 
 #filler-1,
 #filler-2 {
+	position: relative;
+	border-radius: 10px;
+	background-image: url("assets/bg/notepad-paper.png");
 	margin: 40px 15px;
 	top: 40px;
 	text-align: center;
 	padding: 5px;
+	padding-top: 50px;
+}
+
+.filler-inner {
 	overflow: auto;
+	height: 100%;
+}
+
+#filler-1::before,
+#filler-2::before {
+	content: url("assets/bg/spiral.png");
+	position: absolute;
+	top: -3%;
+	left: 6%;
 }
 
 /*notebook*/
@@ -79,19 +94,6 @@ body {
 	display: flex;
 	padding: 30px;
 }
-
-/*
-.wrapper:after {
-	content: url(https://doqmeat.neocities.org/!g/web/materials/spiral-test4.png);
-	position: absolute;
-	z-index: 10;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	top: 68%;
-	left: 50%;
-	pointer-events: none;
-}
-*/
 
 #tab1 {
 	flex: 2%;
@@ -115,7 +117,7 @@ body {
 	width: 49.5%;
 	border: 1px solid pink;
 	vertical-align: top;
-	height: 100%;
+	height: 600px;
 	margin-right: 63px;
 	overflow: hidden;
 }
@@ -130,14 +132,6 @@ body {
 	padding: 5px;
 	width: 100%;
 	height: 97%;
-	overflow: auto;
-}
-
-.inner-right {
-	margin: 30px;
-	padding: 5px;
-	width: 100%;
-	height: 520px;
 	overflow: auto;
 }
 
@@ -194,6 +188,7 @@ body {
 
 #mobile {
 	display: none;
+	text-align: center;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -219,11 +214,6 @@ body {
 		background-size: 840px;
 	}
 
-	.inner {
-		height: 88%;
-		margin-top: 40px;
-	}
-
 	#tab1,
 	#tab2 {
 		margin-top: 40px;
@@ -235,8 +225,9 @@ body {
 		background-size: 760px;
 	}
 
-	.inner {
-		height: 82%;
+	.page,
+	.page.right {
+		height: 490px;
 		margin-top: 50px;
 	}
 
@@ -267,10 +258,15 @@ body {
 		margin-bottom: 50px;
 	}
 
+	.page,
+	.page.right {
+		height: 570px;
+		margin-top: 0px;
+	}
+
 	#notebook {
 		background-size: contain;
 		background-position: top;
-		border: 1px solid black;
 		height: 100%;
 	}
 
@@ -294,11 +290,6 @@ body {
 		width: 37px;
 	}
 
-	.inner {
-		height: 95%;
-		margin-top: 10px;
-	}
-
 	#logo img {
 		width: 80%;
 		top: 0px;
@@ -306,74 +297,71 @@ body {
 
 	#filler-1,
 	#filler-2 {
-		margin: 15px 20px;
+		display: inline-block;
+		width: 39%;
+		vertical-align: top;
+		margin: 15px 50px;
+	}
+
+	#filler-1::before,
+	#filler-2::before {
+		top: -0.8%;
+		left: 30%;
+	}
+
+}
+
+@media only screen and (max-width:930px) {
+
+	#filler-1,
+	#filler-2 {
+		margin: 15px 40px;
+	}
+
+	#filler-1::before,
+	#filler-2::before {
+		top: -0.6%;
+		left: 28%;
 	}
 }
 
 @media only screen and (max-width: 915px) {
 	#notebook {
-		background-size: cover;
+		background-size: 900px;
 	}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width:745px) {
+
+	#filler-1,
+	#filler-2 {
+		margin: 15px 30px;
+	}
+
+	#filler-1::before,
+	#filler-2::before {
+		top: -0.6%;
+		left: 25%;
+	}
+}
+
+@media only screen and (max-width: 450px) {
 	#mobile {
 		display: block;
 	}
 
-	/*
-	#notebook{
-		display:block;
+	#filler-1,
+	#filler-2 {
+		display: block;
+		margin: auto;
+		margin-top: 25px;
+		width: 80%;
+		padding: 20px;
 	}
-	
-	#tab1 {
-	flex: none;
-}
 
-#tab2 {
-	flex: none;
-}
-
-#notebook-pages {
-	width:100%;
-	flex:none;
-	display: block;
-}
-
-.wrapper {
-	width:100%;
-	display: block;
-}
-
-.page {
-	display: block;
-	width:600px;
-	border: 1px solid pink;
-	vertical-align: top;
-	height: auto;
-	margin:auto;
-}
-	
-	.page.right {
-	margin: 0px;
-}
-
-.inner {
-	border: 1px solid lightgreen;
-	margin: 10px;
-	padding: 5px;
-	width: 100%;
-	height: 97%;
-	overflow: auto;
-}
-
-.inner-right {
-	margin: 30px;
-	padding: 5px;
-	width: 100%;
-	height: auto;
-	overflow: auto;
-}
-*/
+	#filler-1::before,
+	#filler-2::before {
+		content: none;
+	}
 
 }
