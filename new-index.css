@@ -21,6 +21,39 @@ body {
 	word-break: keep-all;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: gaegu-b;
+	color: #9d8b7a;
+}
+
+b {
+	text-shadow: 1px 1px 1px #dfada8;
+}
+
+i {
+	text-shadow: 1px 1px 1px #c9d3cb;
+}
+
+mark {
+	background: #f7efbd;
+	color: rosybrown;
+}
+
+a {
+	color: #765823;
+	text-shadow: 1px 1px 1px white;
+	text-decoration: wavy underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 #wrapper {
 	display: grid;
 	grid-template-areas:
@@ -115,7 +148,6 @@ body {
 .page {
 	display: inline-flex;
 	width: 49.5%;
-	border: 1px solid pink;
 	vertical-align: top;
 	height: 600px;
 	margin-right: 63px;
@@ -127,7 +159,6 @@ body {
 }
 
 .inner {
-	border: 1px solid lightgreen;
 	margin: 10px;
 	padding: 5px;
 	width: 100%;
@@ -174,16 +205,6 @@ body {
 	writing-mode: vertical-lr;
 	float: left;
 	border-left: none;
-}
-
-@font-face {
-	font-family: gaegu-r;
-	src: url("assets/fonts/Gaegu-Regular.ttf");
-}
-
-@font-face {
-	font-family: star;
-	src: url("assets/fonts/Stars_font.ttf");
 }
 
 #mobile {

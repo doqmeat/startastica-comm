@@ -1,0 +1,19 @@
+@font-face {
+	font-family: gaegu-r;
+	src: url("Gaegu-Regular.ttf");
+}
+
+@font-face {
+	font-family: gaegu-l;
+	src: url("Gaegu-Light.ttf");
+}
+
+@font-face {
+	font-family: gaegu-b;
+	src: url("Gaegu-Bold.ttf");
+}
+
+@font-face {
+	font-family: star;
+	src: url("Stars_font.ttf");
+}
