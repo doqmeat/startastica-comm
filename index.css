@@ -33,6 +33,7 @@ h6 {
 
 b {
 	text-shadow: 1px 1px 1px #dfada8;
+	font-family: gaegu-b, var(--fonts);
 }
 
 i {
@@ -187,6 +188,8 @@ a:hover {
 #tab1 button:focus,
 #tab2 button:focus {
 	width: 40px;
+	outline: none;
+	filter: saturate(3);
 }
 
 #tab1 button {

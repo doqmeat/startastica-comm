@@ -1,5 +1,6 @@
 var defaultOpen = document.getElementById("defaultOpen");
 defaultOpen.click();
+defaultOpen.focus();
 
 //		funtion that makes the tabs change the page
 function openTab(tabName) {
